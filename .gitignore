@@ -1,0 +1,9 @@
+
+.idea
+node_modules
+database.sqlite
+
+dump.rdb
+logs
+*.js.orig
+*.js
