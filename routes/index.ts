@@ -11,5 +11,12 @@ router.get('/', (req: Request, res: Response) => {
     });
 });
 
+router.post('/generate_image.json', (req: Request, res: Response) => {
+    console.log(req.body.source);
+    res.json({
+        success: true
+    });
+});
+
 // module.exports = router;
 export default router;

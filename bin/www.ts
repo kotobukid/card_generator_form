@@ -9,6 +9,8 @@ const port = 3000
 import indexRouter from '../routes';
 
 app.set('view engine', 'pug');
+const limit = '50mb';
+app.use(express.json({limit, extended: true, parameterLimit: 50000}));
 
 app.use('/', indexRouter);
 

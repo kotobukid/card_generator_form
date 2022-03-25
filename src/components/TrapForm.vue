@@ -68,6 +68,7 @@ import {Component, Prop, Vue} from 'vue-property-decorator';
 import {SourceWeapon, RawSourceWeapon, SourceTrap, RawSourceTrap} from "../types";
 import AssistButtons from "./AssistButtons.vue";
 import IncrementButtons from "./IncrementButtons.vue";
+import axios, {AxiosResponse} from "axios";
 
 @Component({
     components: {
@@ -106,7 +107,9 @@ export default class TrapForm extends Vue {
     }
 
     submit(): void {
-        console.log(this.item);
+        axios.post('/generate_image.json', {source: this.item}).then((res: AxiosResponse<{ success: boolean }>) => {
+            console.log(res.data.success);
+        });
     }
 }
 </script>
