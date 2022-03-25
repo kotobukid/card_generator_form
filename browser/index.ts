@@ -1,7 +1,7 @@
 import Vue from "vue";
 import MainApp from '../src/components/MainApp.vue';
 
-require('../less/common.less');
+require('../src/assets/stylesheets/style.less');
 
 window.onload = () => {
     new Vue({

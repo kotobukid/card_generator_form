@@ -1,20 +1,26 @@
 <template lang="pug">
-    .main_app
-        span(v-text="message")
+    #app
+        form-switcher
 </template>
 
 <script lang="ts">
-import Component from "vue-class-component";
-import {Prop, Vue} from "vue-property-decorator";
-@Component
-export default class MainApp extends Vue {
-    @Prop({default: ""})
-    readonly message!: string;
+import {Component, Vue} from 'vue-property-decorator';
+import FormSwitcher from './FormSwitcher.vue';
+
+@Component({
+    components: {
+        'form-switcher': FormSwitcher,
+    },
+})
+export default class App extends Vue {
 }
 </script>
 
-<style lang="less" scoped>
-.main_app {
-    color: green;
+<style lang="less">
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
 }
 </style>

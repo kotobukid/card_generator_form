@@ -1,0 +1,30 @@
+.common_button() {
+    display: inline-block;
+    cursor: pointer;
+    padding: 2px 4px;
+    border: 1px solid grey;
+    border-radius: 3px;
+    background-color: #efefef;
+    margin-right: 3px;
+    min-width: 25px;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1rem;
+    user-select: none;
+    &:active {
+        position: relative;
+        top: 1px;
+    }
+}
+
+.button {
+    .common_button();
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &.clear {
+        background-color: lightblue;
+    }
+}
